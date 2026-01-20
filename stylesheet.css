@@ -58,10 +58,28 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid blue;
 }
 
-table, th, td{
-    border: 2px solid black;
-    text-align: center;
-    padding: 10px;
+.parent-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center both rows horizontally */
+    row-gap: 1px;
 }
 
+.container {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: stretch;     /* Makes items same height */
+    width: 100%;
+    max-width: 600px; /* Keeps layout tidy on larger screens */
+    
+}
+
+.week, .number, .cell{
+    flex: 1 1 0; /* Let each item grow/shrink evenly */
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+
+}
 
