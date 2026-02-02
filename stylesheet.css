@@ -66,13 +66,14 @@ background-color: #161748;
 
 .date {
 position: absolute;
-top: 17%;
+top: 150px;
 left: 50%;
 transform: translate(-50%, -50%);
 background-color: white;
 width: 300px;
 text-align: center;
 color: #161748;
+border-radius: 2rem;
 }
 
 .parent-container {
@@ -93,19 +94,19 @@ border: 2px solid black;
     .sidebar {
 grid-area: sidebar;
 width: 100%;
-min-width: 100px;
+min-width: 150px;
     }
 
     .main {
         display: grid;
         grid-template-columns: repeat(31, 1fr);
-       
+      
     }
 
 .week, .number, .cell{
   border: 2px solid lightgray;
   font-size: 1rem;
-  min-width: 30px;
+  min-width: 20px;
   height: 50px;
 inline-size: 100%;
 aspect-ratio: 1/1;
@@ -115,7 +116,7 @@ border-radius: .1em;
 
 .week, .number {
 font-weight: bolder;
-border: 3px solid #161748;
+border: 2px solid #161748;
 }
 
 input[type="text"], input[type="checkbox"]{
@@ -126,8 +127,9 @@ border: 1px solid #161748;
 
            }
 
-@media screen and (max-width: 1030px) {
-    .week, .number, .cell {
+@media screen and (max-width: 1100px) {
+    .week, .number {
+
 
     }
 
@@ -136,7 +138,17 @@ border: 1px solid #161748;
         grid-template-columns: repeat(7, 1fr);
     }
 
+    .parent-container {
+
+    }
+
 .none {
 display: none;
+}
+}
+
+@media screen and (max-width: 445px) {
+.date {
+top: 250px;
 }
 }
