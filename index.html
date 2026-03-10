@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habit Tracker</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-
 </head>
+
 <body>
+
+
     <div class=heading>
         <h1>KP'z Habit Tracker</h1>
         </div>
@@ -16,20 +18,26 @@
             <h1> February #</h1>        
         </div>
 
+        <div id="week-counter">
+            <h2>Weeks Completed: 0</h2>
+        </div>
+
+        <button id="trigger"> Enter </button>
+
         <div class="parent-container">
             <div class="sidebar">
 <div class="number"> Day # </div>
 <div class="week">Week Day </div>
-    <input type="text" placeholder="Habit 1:"> 
-    <input type="text" placeholder="Habit 2:"> 
-    <input type="text" placeholder="Habit 3:"> 
-    <input type="text" placeholder="Habit 4:"> 
-    <input type="text" placeholder="Habit 5:"> 
-    <input type="text" placeholder="Habit 6:"> 
-    <input type="text" placeholder="Habit 7:"> 
-    <input type="text" placeholder="Habit 8:"> 
-    <input type="text" placeholder="Habit 9:"> 
-    <input type="text" placeholder="Habit 10:"> 
+    <input type="text" id="input1" placeholder="Habit 1:"> 
+    <input type="text" id="input2" placeholder="Habit 2:"> 
+    <input type="text" id="input3" placeholder="Habit 3:"> 
+    <input type="text" id="input4" placeholder="Habit 4:"> 
+    <input type="text" id="input5" placeholder="Habit 5:"> 
+    <input type="text" id="input6" placeholder="Habit 6:"> 
+    <input type="text" id="input7" placeholder="Habit 7:"> 
+    <input type="text" id="input8" placeholder="Habit 8:"> 
+    <input type="text" id="input9" placeholder="Habit 9:"> 
+    <input type="text" id="input10" placeholder="Habit 10:"> 
             </div>
 
             <div class="main">     
@@ -462,6 +470,15 @@
 
              </div>
         </div>
+<script>
+    const trigger = document.getElementById("trigger");
+    function greet(){
+       const enter = prompt("enter habit");
+        const habits = document.querySelector("input").innerHtml = "hasdf";
+        habits.textContent = `habit`;
+    }
+    trigger.addEventListener("click", greet);
 
+</script>
         </body>
 </html>
