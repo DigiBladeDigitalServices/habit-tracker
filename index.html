@@ -22,8 +22,6 @@
             <h2>Weeks Completed: 0</h2>
         </div>
 
-        <button id="trigger"> Enter </button>
-
         <div class="parent-container">
             <div class="sidebar">
 <div class="number"> Day # </div>
@@ -469,15 +467,23 @@
 <div class="cell none"> <input type="checkbox"> </div>
 
              </div>
+        <button id="trigger"> Enter </button>
         </div>
+
 <script>
-    const trigger = document.getElementById("trigger");
-    function greet(){
-       const enter = prompt("enter habit");
-        const habits = document.querySelector("input").innerHtml = "hasdf";
-        habits.textContent = `habit`;
+    const button = document.getElementById("trigger");
+    const inputs = document.querySelectorAll("#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10");
+    let currentIndex = 0;
+
+    function enter() {
+       let trigger = prompt("Enter Habit");
+        if (trigger) {
+            inputs[currentIndex].value = trigger;
+            currentIndex++;
+        }
     }
-    trigger.addEventListener("click", greet);
+
+    button.addEventListener("click", enter);
 
 </script>
         </body>
