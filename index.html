@@ -14,9 +14,9 @@
         <h1>KP'z Habit Tracker</h1>
         </div>
        
-        <div class="date">
-            <h1> February #</h1>        
-        </div>
+        <h1 id="date">
+                   
+        </h1>
 
         <div id="week-counter">
             <h2>Weeks Completed: 0</h2>
@@ -471,19 +471,25 @@
         </div>
 
 <script>
-    const button = document.getElementById("trigger");
-    const inputs = document.querySelectorAll("#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10");
-    let currentIndex = 0;
+        const button = document.getElementById("trigger");
+        const inputs = document.querySelectorAll("#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10");
+        let currentIndex = 0;
 
-    function enter() {
-       let trigger = prompt("Enter Habit");
-        if (trigger) {
-            inputs[currentIndex].value = trigger;
-            currentIndex++;
-        }
-    }
+    function habit() {
+                 }
 
-    button.addEventListener("click", enter);
+    button.addEventListener("click", habit);
+        console.log(habit);
+
+        /* date */
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    function time() {
+    const d = new Date();
+    let name = month[d.getMonth()];
+    let day = d.getDate();
+        return name + " " + day + "th";
+    };
+    document.getElementById("date").innerHTML = time();
 
 </script>
         </body>

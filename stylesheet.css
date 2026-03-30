@@ -64,7 +64,7 @@ background-color: #161748;
     color: oldlace;
 }
 
-.date {
+#date {
 position: absolute;
 top: 150px;
 left: 50%;
