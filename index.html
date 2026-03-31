@@ -26,16 +26,16 @@
             <div class="sidebar">
 <div class="number"> Day # </div>
 <div class="week">Week Day </div>
-    <input type="text" id="input1" placeholder="Habit 1:"> 
-    <input type="text" id="input2" placeholder="Habit 2:"> 
-    <input type="text" id="input3" placeholder="Habit 3:"> 
-    <input type="text" id="input4" placeholder="Habit 4:"> 
-    <input type="text" id="input5" placeholder="Habit 5:"> 
-    <input type="text" id="input6" placeholder="Habit 6:"> 
-    <input type="text" id="input7" placeholder="Habit 7:"> 
-    <input type="text" id="input8" placeholder="Habit 8:"> 
-    <input type="text" id="input9" placeholder="Habit 9:"> 
-    <input type="text" id="input10" placeholder="Habit 10:"> 
+    <input type="button" id="input1" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input2" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input3" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input4" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input5" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input6" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input7" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input8" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input9" onclick="fun()" value="Enter Habit"> 
+    <input type="button" id="input10" onclick="fun()" value="Enter Habit"> 
             </div>
 
             <div class="main">     
@@ -467,19 +467,34 @@
 <div class="cell none"> <input type="checkbox"> </div>
 
              </div>
-        <button id="trigger"> Enter </button>
+        <button id="trigger" onclick="del()"> delete </button>
         </div>
 
 <script>
         const button = document.getElementById("trigger");
-        const inputs = document.querySelectorAll("#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10");
-        let currentIndex = 0;
+        let inputs = document.querySelectorAll("#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10");
+        
 
-    function habit() {
-                 }
+        function fun() {
+        let enter = prompt("Enter Habit");
+        if (enter) {
+            for (let input of inputs) {
+                if (input.value === "Enter Habit") {
+                    input.value = enter;
+                    break;
+            }
+        }
+    }
+}
 
-    button.addEventListener("click", habit);
-        console.log(habit);
+        function del() {
+            for (let input of inputs) {
+                if (input.value === input.value) {
+                    input.value = "Enter Habit";
+                    
+                }
+            }
+        }
 
         /* date */
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -490,6 +505,7 @@
         return name + " " + day + "th";
     };
     document.getElementById("date").innerHTML = time();
+
 
 </script>
         </body>
