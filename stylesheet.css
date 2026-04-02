@@ -58,10 +58,17 @@ background-color: #161748;
 }
 
 .heading {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family: Cursive;
     font-size: 2rem;
-    color: oldlace;
+    color: #48163f;
+}
+
+.inner-heading {
+    width: 800px;
+    background-color: oldlace;
 }
 
 #date {
@@ -90,7 +97,7 @@ grid-template-areas:
 grid-template-columns: 1fr;
 text-align: center;
 justify-content: center;
-background-color: lightskyblue;
+background-color: #7f5c79;
 border: 2px solid black;
     }
 
